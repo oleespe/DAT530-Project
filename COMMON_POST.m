@@ -51,49 +51,6 @@ switch transition.name
     otherwise
 end
 
-% 'pIronOre','tSmelterForIron'
-% 
-% 'pCopperOre','tSmelterForCopper'
-% 
-% 'pIronOre','tFoundryForSteelIngot'
-% 'pCoal','tFoundryForSteelIngot'
-% 
-% 'pIronIngot','tConstructorForIronPlate'
-% 
-% 'pIronIngot','tConstructorForIronRod'
-% 
-% 'pCopperIngot','tConstructorForWire'
-% 
-% 'pSteelIngot','tConstructorForSteelPipe'
-% 
-% 'pSteelIngot','tConstructorForSteelBeam'
-% 
-% 'pIronRod','tConstructorForScrew'
-% 
-% 'pWire','tConstructorForCable'
-% 
-% 'pIronRod','tAssemblerForRotor'
-% 'pScrew','tAssemblerForRotor'
-% 
-% 'pIronPlate','tAssemblerForReinforcedIronPlate'
-% 'pScrew','tAssemblerForReinforcedIronPlate'
-% 
-% 'pWire','tAssemblerForStator'
-% 'pSteelPipe','tAssemblerForStator'
-% 
-% 'pIronRod','tAssemblerForModularFrame'
-% 'pReinforcedIronPlate','tAssemblerForModularFrame'
-% 
-% 'pReinforcedIronPlate','tAssemblerForSmartPlating'
-% 'pRotor','tAssemblerForSmartPlating'
-% 
-% 'pStator','tAssemblerForAutomatedWiring'
-% 'pCable','tAssemblerForAutomatedWiring'
-% 
-% 'pModularFrame','tAssemblerForVersatileFramework'
-% 'pSteelBeam','tAssemblerForVersatileFramework'
-
-
 
 
 

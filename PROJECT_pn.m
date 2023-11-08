@@ -3,8 +3,6 @@ global global_info
 global_info.STOP_AT = 25;
 
 % 1 = Impure, 2 = Normal, 3 = Pure
-% Depends on the Miner Tier and the Node Purity the Production Rate
-% Increases or Decreases
 % Miner Tier = 1 -> Impure = 30, Normal = 60, Pure = 120
 % Miner Tier = 2 -> Impure = 60, Normal = 120, Pure = 240
 % Miner Tier = 3 -> Impure = 120, Normal = 240, Pure = 480
@@ -12,7 +10,7 @@ global_info.Node_Purity = 3;
 global_info.Miner_Tier = 3;
 global_info.Overclock_Percentage = 100;
 
-% There are two types of storage Normal and Industrial
+% There are two types of storage: Normal and Industrial.
 % Normal -> 24 Slots, Industrial -> 48 Slots
 % Each slot can hold 100 of each object
 global_info.Storage_Capacity = 24 * 100;
@@ -48,8 +46,8 @@ pni = initialdynamics(pns, dyn);
 
 Sim_Results = gpensim(pni);
 % prnss(Sim_Results);  % print the simulation results 
-plotp(Sim_Results, {'pVersatileFramework','pSmartPlating','pAutomatedWiring'}); % plot the results
-% plotp(Sim_Results, {"pCopperOre", "pCoal", "pIronOre"});
+% plotp(Sim_Results, {'pVersatileFramework','pSmartPlating','pAutomatedWiring'}); % plot the results
+plotp(Sim_Results, {"pCopperOre", "pCoal", "pIronOre"});
 
 idle_time = zeros(1, length(Sim_Results.global_transitions));
 active_idle_time = zeros(1, length(Sim_Results.global_transitions));

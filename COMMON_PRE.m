@@ -6,8 +6,6 @@ fire = 1;
 % Transitions should not fire if the number of tokens in the corresponding
 % output will be greater than the maximum storage.
 if ntokens(global_info.t_p_map(transition.name)) + global_info.transision_output_rates(transition.name) >= global_info.Counters(transition.name) * global_info.Storage_Capacity
-    %fprintf("'%s' has reached its storage capacity \n current storage: %d \n max storage: %d\n\n", ...
-        %transition.name, ntokens(global_info.t_p_map(transition.name)), global_info.Counters(transition.name) * global_info.Storage_Capacity)
     fire = 0;
 end
 
