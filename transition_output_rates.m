@@ -1,3 +1,5 @@
+% This function maps every transition to its corresponding output rate.
+% Only implemented for phase 2 transitions.
 function [return_dict] = transition_output_rates()
 
 global global_info

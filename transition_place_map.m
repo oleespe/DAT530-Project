@@ -1,4 +1,5 @@
 % This functions maps every transition to its corresponding output place.
+% Mapping is for both phase 2 and 4 transitions and places.
 function [return_dict] = transition_place_map()
 
 transitions = ["tCateriumOreMiner",'tIronOreMiner','tCopperOreMiner','tCoalMiner','tLimestoneMiner','tBauxiteMiner','tRawQuartzMiner','tSulfurMiner','tCrudeOilExtractor','tWaterExtractor','tNitrogenGasResourceWellExtractor'...

@@ -2,10 +2,13 @@ function [] = COMMON_POST(transition)
 
 global global_info
 
+% We track the first time every transition fires in a global map. This is
+% then used to calculate certain metrics.
 if ~isKey(global_info.time_of_first_firing, transition.name)
     global_info.time_of_first_firing(transition.name) = current_time();
 end
-    
+
+% We stop the simulation when all resources for phase 2 are produced.
 if global_info.completed_vf && global_info.completed_sp && global_info.completed_aw
     global_info.STOP_SIMULATION = 1;
 end

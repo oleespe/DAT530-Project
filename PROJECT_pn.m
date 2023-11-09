@@ -2,6 +2,7 @@ clear all; clc;
 global global_info
 global_info.STOP_AT = 100;
 
+% These values control how many raw resources are produced per miner.
 % 1 = Impure, 2 = Normal, 3 = Pure
 % Miner Tier = 1 -> Impure = 30, Normal = 60, Pure = 120
 % Miner Tier = 2 -> Impure = 60, Normal = 120, Pure = 240
@@ -35,17 +36,18 @@ global_info.time_of_first_firing = configureDictionary("string", "double");
 pns = pnstruct('Space_Elevator_Phase_2_pdf');
 dyn.m0 = {};
 
+% Phase 4 firing times
 % dyn.ft = {'allothers',1,'tParticleAcceleratorForNuclearPasta',2,'tManufacturerForMagneticFieldGenerator',2,'tManufacturerForThermalPropulsionRocket',2,'tManufacturerForAdaptiveControlUnit',2,'tManufacturerForTurboMotor',8,'tManufacturerForSupercomputer',8,...
 %    'tManufacturerForHighSpeedConnector',4,'tManufacturerForComputer',2,'tManufacturerForRadioControlUnit',4,'tManufacturerForCrystalOscillator',2,'tBlenderForFusedModularFrame',2,'tAssemblerForAssemblyDirectorSystem',4,'tAssemblerForVersatileFramework',2,...
 %    'tAssemblerForAutomatedWiring',2,'tAssemblerForCircuitBoard',2,'tAssemblerForHeatSink',2,'tConstructorForQuartzCrystal',2,'tConstructorForSilica',2};
+
+% Phase 2 firing times
 dyn.ft = {'allothers',1, 'tAssemblerForAutomatedWiring',2, 'tAssemblerForVersatileFramework',2};
 
 pni = initialdynamics(pns, dyn); 
 
 Sim_Results = gpensim(pni);
-% prnss(Sim_Results);
 plotp(Sim_Results, {'pVersatileFramework','pSmartPlating','pAutomatedWiring'});
-% plotp(Sim_Results, {"pCopperOre", "pCoal", "pIronOre"});
 
 print_metrics(Sim_Results);
 

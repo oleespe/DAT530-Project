@@ -5,11 +5,12 @@ fire = 1;
 
 % Transitions should not fire if the number of tokens in the corresponding
 % output will be greater than the maximum storage.
-if ntokens(global_info.t_p_map(transition.name)) + global_info.transision_output_rates(transition.name) >= global_info.Counters(transition.name) * global_info.Storage_Capacity
+if ntokens(global_info.t_p_map(transition.name)) + global_info.transision_output_rates(transition.name)...
+        >= global_info.Counters(transition.name) * global_info.Storage_Capacity
     fire = 0;
 end
 
-% Phase 2 stop conditions
+% Phase 2 stop conditions.
 switch transition.name
     case "tAssemblerForVersatileFramework"
         if ntokens("pVersatileFramework") >= global_info.required_vf
